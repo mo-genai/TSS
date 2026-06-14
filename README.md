@@ -1,5 +1,5 @@
 # The Seventh Seal
-
+ 
 A scroll-driven cinematic piece — the encounter between the Knight and Death.
 
 Static site, no build step. Open `index.html`, or serve the folder:
