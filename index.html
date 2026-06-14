@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Seventh Seal — 1957</title>
+  <meta name="description" content="A man meets Death on a cold shore. An approach in seven lines.">
+  <meta name="theme-color" content="#06070a">
+  <meta property="og:title" content="The Seventh Seal — 1957">
+  <meta property="og:description" content="The body fears. The self stands.">
+  <meta property="og:image" content="assets/img/07-looming.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2306070a'/%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="assets/img/01-sea.jpg">
+  <link rel="preload" as="image" href="assets/img/02-alone.jpg">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-italic.woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- threshold — the first choice -->
+  <div class="gate" id="gate" role="dialog" aria-label="Choose how to enter">
+    <div class="gate-choice">
+      <button class="gate-btn" id="enter-sound" type="button">Sound</button>
+      <span class="gate-rule" aria-hidden="true"></span>
+      <button class="gate-btn" id="enter-silence" type="button">Silence</button>
+    </div>
+  </div>
+
+  <!-- the encounter -->
+  <main class="scene" id="scene" tabindex="-1">
+    <div class="stage">
+
+      <figure class="shot" id="sh-sea">
+        <img src="assets/img/01-sea.jpg" alt="A vast dark sea under storm. At the water's edge, far off, something pale is standing." decoding="async">
+        <video class="loop" src="assets/vid/sea-loop.mp4" muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
+      </figure>
+
+      <figure class="shot" id="sh-alone">
+        <img src="assets/img/02-alone.jpg" alt="A man sits alone among the rocks, facing the water." decoding="async">
+      </figure>
+
+      <figure class="shot" id="sh-far">
+        <img src="assets/img/03-far.jpg" alt="Above the man's camp, on the high cliff, a dark figure stands. Watching." decoding="async">
+      </figure>
+
+      <p class="line knight-line" id="ln-who">
+        <span class="speaker">The Knight</span>
+        <span class="words knight">Who are you?</span>
+      </p>
+
+      <figure class="shot" id="sh-closer">
+        <img src="assets/img/04-closer.jpg" alt="The same cliff. The figure is closer now." decoding="async">
+      </figure>
+
+      <figure class="shot" id="sh-face">
+        <img src="assets/img/05-face.jpg" alt="A pale face inside a black hood, looking at the man." decoding="async">
+      </figure>
+
+      <p class="line death-line" id="ln-death">
+        <span class="speaker">Death</span>
+        <span class="words death">I am Death.</span>
+      </p>
+
+      <figure class="shot" id="sh-knight">
+        <img src="assets/img/06-knight.jpg" alt="The man's face, lowered. He does not look up." decoding="async">
+      </figure>
+
+      <p class="line knight-line" id="ln-come">
+        <span class="speaker">The Knight</span>
+        <span class="words knight">Have you come for me?</span>
+      </p>
+
+      <figure class="shot" id="sh-looming">
+        <img src="assets/img/07-looming.jpg" alt="The same cliff. He is very near now, standing over the man's camp." decoding="async">
+      </figure>
+
+      <p class="line death-line" id="ln-beside">
+        <span class="speaker">Death</span>
+        <span class="words death">I have been walking beside you for a long time.</span>
+      </p>
+
+      <p class="line knight-line" id="ln-know">
+        <span class="speaker">The Knight</span>
+        <span class="words knight">I know.</span>
+      </p>
+
+      <figure class="shot" id="sh-close">
+        <img src="assets/img/08-close.jpg" alt="Death's face, very close. The eyes are on you." decoding="async">
+      </figure>
+
+      <p class="line death-line" id="ln-ready">
+        <span class="speaker">Death</span>
+        <span class="words death">Are you ready?</span>
+      </p>
+
+      <figure class="shot" id="sh-stand">
+        <img src="assets/img/09-stand.jpg" alt="The man, facing forward, eyes level. Still." decoding="async">
+      </figure>
+
+      <p class="line knight-line" id="ln-final">
+        <span class="speaker">The Knight</span>
+        <span class="words knight" id="ln-afraid">My body is afraid.</span>
+        <span class="words stand-words" id="ln-notafraid">I am not.</span>
+      </p>
+
+      <figure class="shot" id="sh-game">
+        <img src="assets/img/10-game.jpg" alt="Two figures on the rocks. A chessboard between them." decoding="async">
+      </figure>
+
+      <p class="line" id="ln-thesis">
+        <span class="words aside">Death does not arrive. It has always been near.</span>
+      </p>
+
+      <div class="endcard" id="endcard">
+        <div class="card-film">
+          <p class="film-title">The Seventh Seal</p>
+          <p class="film-year">1957</p>
+          <p class="film-dir">Ingmar Bergman</p>
+        </div>
+        <div class="card-epitaph">
+          <span class="card-rule" aria-hidden="true"></span>
+          <p class="epitaph">The body fears. The self stands.</p>
+        </div>
+      </div>
+
+      <div class="veil veil-vignette" aria-hidden="true"></div>
+      <div class="veil veil-presence" aria-hidden="true"></div>
+      <canvas class="grain" id="grain" aria-hidden="true"></canvas>
+
+      <div class="hint" id="hint" aria-hidden="true">
+        <span class="hint-line"></span>
+        <span class="hint-text">Scroll to approach</span>
+      </div>
+
+      <button class="soundtoggle off" id="soundtoggle" type="button" aria-pressed="false">Sound</button>
+
+    </div>
+  </main>
+
+  <script src="assets/js/gsap.min.js" defer></script>
+  <script src="assets/js/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

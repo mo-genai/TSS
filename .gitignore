@@ -1,0 +1,10 @@
+# local dev / OS cruft
+.claude/
+.DS_Store
+Thumbs.db
+*.log
+
+# exploratory source material — not part of the deployed site
+Concept images for inspiration/
+more images/
+loop.mp4
